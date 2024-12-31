@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabViewMaui.MainPage"
+             xmlns:local="clr-namespace:TabViewMaui"
+             xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="local:CustomTabItem">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState x:Name="Normal" >
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Blue" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="TextColor" Value="Red" />
+                                </VisualState.Setters>
+                            </VisualState>                           
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <tabView:SfTabView x:Name="tabView" TabBarBackground="LightBlue" 
+                           TabBarHeight="60" SelectionChanged="OnSelectionChanged" >
+
+            <tabView:SfTabView.Items>
+
+                <local:CustomTabItem x:Name="call" Header="Call" >
+                    <local:CustomTabItem.ImageSource>
+                        <FontImageSource Glyph="{x:Static local:FontsClass.ContactPhone}" FontFamily= "MaterialDesignIcons" Color="{Binding Source={x:Reference call}, Path=TextColor}"/>
+                    </local:CustomTabItem.ImageSource>
+                    <local:CustomTabItem.Page>
+
+                        <local:TabPage1/>
+
+                    </local:CustomTabItem.Page>
+
+                </local:CustomTabItem>
+
+                <local:CustomTabItem x:Name="fav" Header="Favorite" >
+                    <local:CustomTabItem.ImageSource>
+                        <FontImageSource Glyph="{x:Static local:FontsClass.Heart}" FontFamily= "MaterialDesignIcons" Color="{Binding Source={x:Reference fav}, Path=TextColor}"/>
+                    </local:CustomTabItem.ImageSource>
+                    <local:CustomTabItem.Page>
+
+                        <local:TabPage2/>
+
+                    </local:CustomTabItem.Page>
+
+                </local:CustomTabItem>
+
+                <local:CustomTabItem x:Name="contacts" Header="Contacts" >
+                    <local:CustomTabItem.ImageSource>
+                        <FontImageSource Glyph="{x:Static local:FontsClass.Contacts}" FontFamily= "MaterialDesignIcons" Color="{Binding Source={x:Reference contacts}, Path=TextColor}"/>
+                    </local:CustomTabItem.ImageSource>
+                    <local:CustomTabItem.Page>
+
+                        <local:TabPage3/>
+
+                    </local:CustomTabItem.Page>
+                </local:CustomTabItem>
+
+            </tabView:SfTabView.Items>
+
+        </tabView:SfTabView>
+
+    </Grid>
+
+</ContentPage>

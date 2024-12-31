@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabViewMaui.TabPage2"
+             Title="Favorite"     
+             xmlns:local="clr-namespace:TabViewMaui">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="About"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <ListView ItemsSource="{Binding Colllections}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="10,5">
+                            <Label VerticalOptions="Start"
+                           HorizontalOptions="Start"
+                           TextColor="#666666"
+                           FontSize="16"
+                           Text="{Binding }" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
