@@ -56,7 +56,7 @@ Create different content pages that you need to display as a Tab Item. For examp
              x:Class="TabViewMaui.TabPage1"
              Title="TabPage1">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Click"/>
+        <ToolbarItem Text="Help"/>
     </ContentPage.ToolbarItems>
     
      <ContentPage.Content>
@@ -136,9 +136,10 @@ public partial class MainPage : ContentPage
             // Handle the click event for the toolbar item
             DisplayAlert("Toolbar Clicked", $"Toolbar item '{toolbarItem.Text}' clicked in MainPage", "OK");
             
-            if (toolbarItem.Text == "Click")
+            // You can add additional navigation or logic here
+            if (toolbarItem.Text == "Help")
             {
-                // You can add additional navigation or logic here
+                Navigation.PushAsync(new HelpPage());
             }
         }
     }
