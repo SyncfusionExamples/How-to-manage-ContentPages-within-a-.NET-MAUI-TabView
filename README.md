@@ -156,7 +156,7 @@ public partial class MainPage : ContentPage
 
 **Output**
 
-![TabViewMaui.gif](https://support.syncfusion.com/kb/agent/attachment/article/18735/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTEwIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.nvB6lrnqBhL61d2fUDq_-38Lb2xAiOivrJjePat8Ekg)
+![TabView_Accessibility.gif](https://support.syncfusion.com/kb/agent/attachment/article/18735/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM1NDQ3Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.ax-Kh0uMIigfCXXOpIQYm9toiQPedQYwNfK0JzzVrCo)
 
 **Requirements to run the demo**
  
